@@ -1,0 +1,51 @@
+{
+    "version": 3,
+    "configurePresets": [
+        {
+            "name": "ios-dev",
+            "displayName": "iOS Development",
+            "description": "iOS Development configuration",
+            "generator": "Xcode",
+            "binaryDir": "${sourceDir}/build/ios-dev",
+            "cacheVariables": {
+                "CMAKE_SYSTEM_NAME": "iOS",
+                "CMAKE_OSX_DEPLOYMENT_TARGET": "13.0",
+                "CMAKE_XCODE_ATTRIBUTE_DEVELOPMENT_TEAM": "YOUR_TEAM_ID_HERE",
+                "CMAKE_XCODE_ATTRIBUTE_CODE_SIGN_IDENTITY": "Apple Development",
+                "CMAKE_XCODE_ATTRIBUTE_ONLY_ACTIVE_ARCH": "YES",
+                "CMAKE_XCODE_ATTRIBUTE_CODE_SIGN_STYLE": "Manual",
+                "CMAKE_XCODE_ATTRIBUTE_PROVISIONING_PROFILE_SPECIFIER": "",
+                "CMAKE_XCODE_ATTRIBUTE_INSTALL_PATH": "/Applications"
+            },
+            "environment": {
+                "IOS_PLATFORM": "iphoneos"
+            }
+        },
+        {
+            "name": "ios-release",
+            "displayName": "iOS Release",
+            "description": "iOS Release configuration for App Store",
+            "generator": "Xcode",
+            "binaryDir": "${sourceDir}/build/ios-release",
+            "cacheVariables": {
+                "CMAKE_SYSTEM_NAME": "iOS",
+                "CMAKE_OSX_DEPLOYMENT_TARGET": "13.0",
+                "CMAKE_XCODE_ATTRIBUTE_DEVELOPMENT_TEAM": "YOUR_TEAM_ID_HERE",
+                "CMAKE_XCODE_ATTRIBUTE_CODE_SIGN_IDENTITY": "Apple Distribution",
+                "CMAKE_XCODE_ATTRIBUTE_CODE_SIGN_STYLE": "Manual",
+                "CMAKE_XCODE_ATTRIBUTE_PROVISIONING_PROFILE_SPECIFIER": "Your_Profile_Name",
+                "CMAKE_XCODE_ATTRIBUTE_INSTALL_PATH": "/Applications"
+            },
+            "environment": {
+                "IOS_PLATFORM": "iphoneos"
+            }
+        }
+    ],
+    "buildPresets": [
+        {
+            "name": "ios-archive",
+            "configurePreset": "ios-release",
+            "configuration": "Release"
+        }
+    ]
+}
