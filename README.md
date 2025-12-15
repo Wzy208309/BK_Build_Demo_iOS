@@ -1,12 +1,51 @@
-# LanDunTest
-# Demo project github: 
-# https://github.com/Wzy208309/BK_Build_Demo_iOS.git
+# LanDunTest - iOS Build Automation Demo
 
-# Due to the need to avoid sensitive information, in our demo, all commonly used keywords have been excluded.
-# A complete process for iOS development can be demonstrated, including : set Version -> Cmake generation Project -> Archive with Xcode -> and iPA export, etc.
+## Overview
+This repository demonstrates a **complete iOS development workflow** in a **sensitive-information-free** environment, covering:
+- Version setting
+- CMake project generation
+- Xcode archiving
+- IPA export
 
-# The current environment is an experience environment provided by BK. (https://bk.tencent.com/) 
-# The actual deployment steps are as follows:
-#   1.the operations and maintenance (O&M) team sets up a commercial BlueKing environment, which includes more capabilities.
-#   2.the research and development (R&D) team deploys the build pipeline on the CI/CD platform.
-#   3.the pipeline consists of a plugin system, and additional plugin capabilities can be developed independently based on future needs.
+> ⚠️ **Note**: All commonly used keywords have been excluded from this demo to protect sensitive information.
+
+## Environment
+- **Current Setup**: BK-provided experience environment (see [Tencent BlueKing](https://bk.tencent.com/))
+- **Production Deployment**: See [Implementation Guide](#implementation-guide) below
+
+## Key Features
+1. **End-to-End iOS Build Pipeline**
+   - Version management
+   - Cross-platform build configuration (CMake)
+   - Xcode project archiving
+   - IPA package export
+
+2. **BlueKing Integration**
+   - Leverages Tencent's enterprise-grade DevOps platform
+   - Supports commercial-grade capabilities in production
+
+## Implementation Guide
+
+### Production Deployment Steps
+1. **O&M Team Setup**
+   - Deploy commercial BlueKing environment
+     - Provides enhanced capabilities beyond demo environment
+     - Includes full CI/CD and DevOps toolchain
+
+2. **R&D Team Configuration**
+   - Set up build pipeline on BlueKing's CI/CD platform
+   - Pipeline architecture:
+     - **Plugin-based system** for modular operations
+     - **Extensible design**:
+       - Develop custom plugins as needed
+       - Future-proof architecture for additional requirements
+
+### Technical Context
+- **Demo Environment**: BK-provided sandbox (limited capabilities)
+- **Production Environment**: BlueKing Enterprise Edition
+  - Features:
+    - Automated build pipelines
+    - Plugin ecosystem
+    - Scalable infrastructure
+
+## Repository Structure
